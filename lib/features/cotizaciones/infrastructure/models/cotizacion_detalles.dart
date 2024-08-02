@@ -2,19 +2,19 @@ class CotizacionDetalles {
   final int id;
   // final String emp;
   // final String empDiv;
-  // final DateTime fch;
+  final DateTime fch;
   // final String hor;
   // final String ser;
   // final int fol;
   final String serFol;
-  // final int cltEnt;
+  final int cltEnt;
   final int serDoc;
   // final int mon;
   // final int ageVtaEnt;
   // final int monTc;
   // final String cndPag;
   // final int numLinTot;
-  // final String est;
+  final String est;
   // final String estAut;
   // final String obs;
   // final DateTime fchVig;
@@ -30,19 +30,19 @@ class CotizacionDetalles {
     required this.id,
     // required this.emp,
     // required this.empDiv,
-    // required this.fch,
+    required this.fch,
     // required this.hor,
     // required this.ser,
     // required this.fol,
     required this.serFol,
-    // required this.cltEnt,
+    required this.cltEnt,
     required this.serDoc,
     // required this.mon,
     // required this.ageVtaEnt,
     // required this.monTc,
     // required this.cndPag,
     // required this.numLinTot,
-    // required this.est,
+    required this.est,
     // required this.estAut,
     // required this.obs,
     // required this.fchVig,
@@ -60,19 +60,19 @@ class CotizacionDetalles {
         id: json["id"] ?? 0,
         // emp: json["emp"] ?? "",
         // empDiv: json["emp_div"] ?? "",
-        // fch: DateTime.parse(json["fch"]),
+        fch: DateTime.parse(json["fch"]),
         // hor: json["hor"] ?? "",
         // ser: json["ser"] ?? "",
         // fol: json["fol"] ?? 0,
         serFol: json["ser_fol"] ?? "",
-        // cltEnt: json["clt_ent"] ?? 0,
+        cltEnt: json["clt_ent"] ?? 0,
         serDoc: json["ser_doc"] ?? 0,
         // mon: json["mon"] ?? 0,
         // ageVtaEnt: json["age_vta_ent"] ?? 0,
         // monTc: json["mon_tc"] ?? 0,
         // cndPag: json["cnd_pag"] ?? "",
         // numLinTot: json["num_lin_tot"] ?? 0,
-        // est: json["est"] ?? "",
+        est: json["est"] ?? "",
         // estAut: json["est_aut"] ?? "",
         // obs: json["obs"] ?? "",
         // fchVig: DateTime.parse(json["fch_vig"]),
@@ -89,19 +89,19 @@ class CotizacionDetalles {
         "id": id,
         // "emp": emp,
         // "emp_div": empDiv,
-        // "fch": fch.toIso8601String(),
+        "fch": fch.toIso8601String(),
         // "hor": hor,
         // "ser": ser,
         // "fol": fol,
         "ser_fol": serFol,
-        // "clt_ent": cltEnt,
+        "clt_ent": cltEnt,
         "ser_doc": serDoc,
         // "mon": mon,
         // "age_vta_ent": ageVtaEnt,
         // "mon_tc": monTc,
         // "cnd_pag": cndPag,
         // "num_lin_tot": numLinTot,
-        // "est": est,
+        "est": est,
         // "est_aut": estAut,
         // "obs": obs,
         // "fch_vig": fchVig.toIso8601String(),

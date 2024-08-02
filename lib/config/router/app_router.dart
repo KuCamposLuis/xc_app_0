@@ -9,7 +9,15 @@ import 'package:xc_app_0/features/cotizaciones/cotizaciones.dart';
 import 'package:xc_app_0/features/home/screens/home_screen.dart';
 import 'package:xc_app_0/features/home/views/home_view.dart';
 
-final appRouter = GoRouter(initialLocation: '/', routes: [
+import '../../features/auth/auth.dart';
+import '../../features/cotizaciones/presentation/views/storage/local_cotizacion_home_view.dart';
+import '../../features/cotizaciones/presentation/views/storage/storage_cotizacion_view.dart';
+
+final appRouter = GoRouter(initialLocation: '/login', routes: [
+  GoRoute(
+    path: '/login',
+    builder: (context, state) => const LoginScreen(),
+  ),
   ShellRoute(
       builder: (context, state, child) {
         return HomeScreen(
@@ -51,8 +59,19 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
         GoRoute(
           path: "/facturas",
           builder: (context, state) {
-            return const CotizacionesScreen();
+            return const LocalCotizacionHomeView();
           },
+          routes: [
+            GoRoute(
+                path: "cotizacion/:id",
+                builder: (context, state) {
+                  final cotizacionIdString = state.pathParameters['id'] ?? '0';
+                  final cotizacionId = int.tryParse(cotizacionIdString) ?? 0;
+                  return LocalCotizacionIndView(
+                    cotizacionId: cotizacionId,
+                  );
+                }),
+          ],
         ),
         GoRoute(
             path: "/catalogo",

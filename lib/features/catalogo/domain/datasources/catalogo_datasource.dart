@@ -6,6 +6,7 @@ abstract class CatalogoDatasource {
   Future<List<Entidades>> getEntidades();
 
   Future<AllUser> getAllUser();
-  Future<ArticulosServicios> getArticulos();
+  Future<List<ArticulosServicios>> getArticulos();
+  Future<ArticulosServicios> getArticulosById(String id);
   Future<Unidades> getUnidades();
 }

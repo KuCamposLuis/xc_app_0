@@ -1,7 +1,14 @@
-import '../entities/cotizacion.dart';
+import 'package:xc_app_0/features/cotizaciones/domain/entities/artserv.dart';
+
+import '../domain.dart';
 
 abstract class CotizacionesRepository {
-  Future<List<Cotizacion>> getCotizacionByPage();
+  Future<List<Cotizacion>> getCotizacion();
   Future<Cotizacion> getCotizacionById(String id);
-  Future<Cotizacion> createUpdateProduct(Map<String, dynamic> cotizacionlike);
+  // Future<Cotizacion> createCotizacion(int serDoc, int cliente);
+
+  //GetArticulos
+  Future<List<Artserv>> getLineaPresupuesto();
+  Future<List<Artserv>> getLineaPresupuestoById(String id);
+  Future<Artserv> getArticulosServiciosCotizacion(String id);
 }

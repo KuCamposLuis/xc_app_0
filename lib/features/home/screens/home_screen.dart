@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xc_app_0/presentation/widgets/widgets.dart';
+import 'package:xc_app_0/features/home/widgets/side_menu.dart';
+import 'package:xc_app_0/features/home/widgets/custom_bottom_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
@@ -11,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const SideMenu(),
       body: childView,
       bottomNavigationBar: const CustomBottomNavigation(),
     );

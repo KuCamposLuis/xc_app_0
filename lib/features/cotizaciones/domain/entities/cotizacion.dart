@@ -1,13 +1,24 @@
+import 'package:isar/isar.dart';
+
+part 'cotizacion.g.dart';
+
+@collection
 class Cotizacion {
+  Id? idLocal;
   final int id;
-  String
-      serFol; //! Esta variable es importante para La informacion de la cotizacion general
-  String
-      serDoc; //! Esta variable es importante para La informacion de la cotizacion general//! Esta variable es importante para La informacion de la cotizacion general
+  DateTime fch;
+  String serFol;
+  String serDoc;
+  String cltEnt;
+  String est;
+
   //TODO: AGREGAR VALORES FALTANTES DE MIS COTIZACIONES.
   Cotizacion({
     required this.id,
+    required this.fch,
     required this.serFol,
     required this.serDoc,
+    required this.cltEnt,
+    required this.est,
   });
 }

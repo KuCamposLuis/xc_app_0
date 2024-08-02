@@ -7,6 +7,7 @@ abstract class CatalogoRepository {
 
   Future<AllUser> getAllUser();
   Future<AllUser?> getUserById(int id); // Nuevo método
-  Future<ArticulosServicios> getArticulos();
+  Future<List<ArticulosServicios>> getArticulos();
+  Future<ArticulosServicios> getArticulosById(String id);
   Future<Unidades> getUnidades();
 }

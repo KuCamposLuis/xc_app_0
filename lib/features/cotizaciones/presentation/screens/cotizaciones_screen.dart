@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:xc_app_0/features/cotizaciones/presentation/views/cotizaciones_home_views.dart';
+import 'package:xc_app_0/features/cotizaciones/presentation/views/online/cotizaciones_home_views.dart';
 
 class CotizacionesScreen extends StatelessWidget {
   const CotizacionesScreen({super.key});

@@ -14,7 +14,7 @@ class CatalogoRepositoryImpl extends CatalogoRepository {
   }
 
   @override
-  Future<ArticulosServicios> getArticulos() {
+  Future<List<ArticulosServicios>> getArticulos() {
     return datasource.getArticulos();
   }
 
@@ -43,5 +43,10 @@ class CatalogoRepositoryImpl extends CatalogoRepository {
   Future<AllUser?> getUserById(int id) {
     // TODO: implement getUserById
     throw UnimplementedError();
+  }
+
+  @override
+  Future<ArticulosServicios> getArticulosById(String id) {
+    return datasource.getArticulosById(id);
   }
 }
